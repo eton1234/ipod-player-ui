@@ -1,38 +1,41 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <title>Album Select</title>
         <link rel="stylesheet" type="text/css" href="ipod.css"/>
     </head>
     <body>
-        <div id="screen">
-              <div class="head-bar">
+        <div aria-labelledby="screen" id="screen">
+              <header role="banner" class="head-bar">
                     <h1>My Music</h1>
-              </div>
-              <div>
-                    <div  class = "albums-album-wrapper">
+              </header>
+              <main role="main">
+                    <div aria-label="album" class="albums-album-wrapper">
                         <a href="songs.html">
-                            <img src = "images/currents.jpg" alt = "Link to page" class = "albums-album-art">
+                            <img class="albums-album-art" src="images/currents.jpg" alt="Link to album">
                         </a>
-                        <h3> Currents</h3>
-                        <p> Tame Impala </p>
+                        <h3 class="albums-album-name"> Currents</h3>
+                        <p class="albums-artist-name"> Tame Impala </p>
+                    </div>
 
+                    <div aria-label="album" class="albums-album-wrapper">
+                        <img class="albums-album-art" src="images/telefone.jpeg" alt="Cover with a woman and a skull">
+                        <h3 class="albums-album-name"> Telefone</h3>
+                        <p class="albums-artist-name"> Noname </p>
                     </div>
-                    <div class = "albums-album-wrapper">
-                        <img src = "images/telefone.jpeg" alt = "Picture with a woman and a skull" class = "albums-album-art">
-                        <h3> Telefone</h3>
-                        <p> Noname </p>
+
+                    <div aria-label="album" class="albums-album-wrapper">
+                        <img class="albums-album-art" src="images/crybaby.jpg" alt="Cover of Melanie Martinez in front of a large Crybaby sign crying above some clouds" >
+                        <h3 class="albums-album-name"> Crybaby</h3>
+                        <p class="albums-artist-name"> "Melanie Martinez </p>
                     </div>
-                    <div class = "albums-album-wrapper">
-                        <img class="albums-album-art" src="images/crybaby.jpg" alt="Melanie Martinez in front of a large Crybaby sign crying above some clouds" >
-                        <h3> Crybaby</h3>
-                        <p> Melanie Martinez </p>
+
+                    <div aria-label="album" class="albums-album-wrapper">
+                        <img class="albums-album-art" src="images/cbook.jpg" alt="Colorful album cover of a smiling man wearing a cap">
+                        <h3 class="albums-album-name"> Coloring Book</h3>
+                        <p class="albums-artist-name"> Chance The Rapper </p>
                     </div>
-                    <div class = "albums-album-wrapper">
-                        <img src = "images/cbook.jpg" alt = "cbook" class = "albums-album-art">
-                        <h3 style = "max-width: 130;"> Coloring Book</h3>
-                        <p> Chance The Rapper </p>
-                    </div>
-              </div>
+                </main>
         </div>
    </body>
 </html>

@@ -1,32 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <link rel = "stylesheet" href = "ipod.css">
         <title>Album Select</title>
     </head>
     
     <body>
-        <div id="screen">
-            <nav    >   
-                <div class = "head-bar">
+        <div aria-labelledby="screen" id="screen">
+            <nav role="navigation">   
+                <div class="head-bar">
                 <form action="albums.html" class="back-button">
                     <button class="back-button"> &larr;</button>
                 </form>
                 </div>
             </nav>
-            <main>
-                <div class = "albums-album-wrapper">
-                    <img src = "images/telefone.jpeg" alt = "Picture with a woman and a skull" class = "songs-album-art">
-                </div>
-                <div>
-                    <h3 class= "songs-album-name"> Telefone</h3>
-                    <p class = "songs-artist-name"> Noname </p>
-                    <p class = "songs-album-year"> 2022</p>
-                </div>
+            <main role="main">
+                <section aria-label="Album meta">
+                    <div class="albums-album-wrapper">
+                        <img class="songs-album-art" src="images/Hamilton-poster.jpeg" alt="Cover of Hamilton Pointing Up" >
+                    </div>
+                    <div aria-label="Album Info" class="songs-info-wrapper">
+                        <h3 class="songs-album-name"> Hamilton (Original Broadway Cast Recording)</h3>
+                        <p class="songs-artist-name"> Lin-Manuel Miranda </p>
+                        <p class="songs-album-year"> 2015</p>
+                    </div>
+                </section>
 
-                <ol>
-                    <li> Hello</li>
-                    <li> sdfsdf </li>
+                <ol aria-label="Album's songs" class="songs-text-info">
+                    <li class="songs-list"> Alexander Hamilton</li>
+                    <li class="songs-list"> Aaron, Burr</li>
+                    <li class="songs-list"> My Shot</li>
+                    <li class="songs-list"> The Story of Tonight</li>
+                    <li class="songs-list"> The Schuyler Sisters</li>
+                    <li class="songs-list"> Farmer Refuted</li>
+                    <li class="songs-list"> You'll Be Back</li>
+                    <li class="songs-list"> Right Hand Man </li>
+                    <li class="songs-list"> A Winter's Ball</li>
+                    <li class="songs-list"> Helpless</li>
                 </ol>
             </main>
         

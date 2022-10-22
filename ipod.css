@@ -7,7 +7,6 @@ body {
 	font-family: Avenir, sans-serif;
 }
 
-
 #screen {
 	height: 530px;
 	width: 300px;
@@ -16,9 +15,10 @@ body {
 
 .head-bar {
 	text-align:  center;
-	background-color: blueviolet;
+	background-color: rgb(206, 160, 53);
 	text-shadow: 2px 2px black;
 	color: white;
+	margin-bottom: 0px;
 }
 
 .back-button {
@@ -32,39 +32,43 @@ body {
 			*/
 
 .albums-album-wrapper {
+	/* side-by-side imaging with float:left */ 
 		max-width: 130;
 		word-wrap: break-word;
 		text-align: center;
 		float: left;
-		margin-left: 10;
-		margin-right: 10;
-		line-height: 85%;
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-bottom: 10px;
 }
 
 .albums-album-art {
-	/*float: left;*/
 	width: 130px;
 	height: 130px;
 }
 
 .albums-album-name {
-
+	font-size: 18px;
+	margin: 2px;
 }
 
 .albums-artist-name {
-
+	font-style: italic;
+	margin: 2px;
 }
 
 /* 
 	Songs 
 			*/
 .songs-info-wrapper {
-	margin-left: 10;
-	margin-right: 10;
-	line-height: 85%;
+	/*scrolling in case the info spills over */ 
+	margin-bottom: 0px;
+	overflow-y: scroll;
+	max-height: 131.6px;
 }
 
 .songs-album-art {
+	margin-top: 0px;
 	margin-left: 10px;
 	margin-right: 10px;
 	width: 130px;
@@ -72,23 +76,28 @@ body {
 }
 
 .songs-album-name {
-	font-size: 24px;
+	font-size: 16px;
+	margin: 0;
 }
 
 .songs-artist-name {
 	font-style: italic;
+	margin: 2px;
 }
 
 .songs-text-info {
-	
 }
 
 .songs-album-year {
 	font-size: 18px;
+	margin: 2px
 }
 
 .songs-list {
-	
+	border: solid black 2px;
+	border-radius: 10px;
+	padding: 1px;
+	margin: 5px;
 }
 
 /* 
