@@ -10,37 +10,37 @@
 </header>
 <body>
    <div id="screen">
-      <nav>
-         <div role= "navigation" class="head-bar">
-            <form action="albums.html" class="back-button">
+      <nav>  <!---- I'm told that it is redundant to add a role to nav  -->
+         <div class="head-bar">
+            <form action="albums.html" class="back-button" aria-label="Go back to albums page">
                <button class="back-button"> <i class="material-icons">arrow_back</i> </button>
-         </form>
+            </form>
          </div>
       </nav>
 
-      <main>
+      <main>   
          <div>
-            <img class = player-album-art src="images/Hamilton-poster.jpeg" alt="Hamiilton Album Cover"/>
+            <img class=player-album-art src="images/Hamilton-poster.jpeg" alt="Hamilton Album Cover"/>
          </div>
 
-         <div aria-label = "Song Info" class="player-song-info">    
-            <p aria-labelledby = "player-song-name" id="player-song-name">Aaron, Burr</p>
+         <div role="toolbar" aria-label="Song Info" class="player-song-info">    
+            <p id="player-song-name" aria-live="polite">Aaron, Burr</p>
             <p><em aria-label = "Album Name" >Hamilton</em> - Lin-Manuel Miranda </p>
          </div>
-
-         <div id="player-time"  >
-            <input id="time-slider" type="range" min="0" max="180" step="1" value="0">
-            <div id="time-elapsed">0:00</div>
-            <div id="time-total">3:00</div>
+         <div role="toolbar" aria-label="Playback controls">
+            <div aria-label="Time sliders" id="player-time" >
+               <input id="time-slider" aria-controls="time-elapsed" type="range" min="0" max="180" step="1" value="0">
+               <div id="time-elapsed">0:00</div>
+               <div id="time-total">3:00</div>
+            </div>
+            <div class="player-controls">
+               <button onclick="prevSong()" aria-label="Previous song" aria-controls="player-song-name"><i class="material-icons">skip_previous</i></button>
+               <button onclick="switchPlay()" aria-label="Play pause"><i id="play" class="material-icons">play_arrow</i></button>
+               <button onclick="nextSong  ()" aria-label="Next song" aria-controls="player-song-name"><i class="material-icons">skip_next</i></button>
+            </div>
          </div>
-
-         <div class = "player-controls">
-            <button onclick="prevSong()"><i class="material-icons">skip_previous</i></button>
-            <button onclick="switchPlay()"><i id="play" class="material-icons">play_arrow</i></button>
-            <button onclick="nextSong  ()"><i class="material-icons">skip_next</i></button>
-         </div>
-
-         <div class = "volume-bar">
+         <div class="volume-bar">
+             <!---- Added a javascript anouncer for volume -->
             <div> <i class="material-icons">volume_down</i> </div>
             <div id="vl0" class = "volume-level"></div>
             <div id="vl1" class = "volume-level"></div>
@@ -49,12 +49,12 @@
             <div id="vl4" class = "volume-level"></div>
             <div id="vl5" class = "volume-level"></div>
          </div>
-         <div role = "toolbar" class="volume-rocker">
+         <div role="toolbar" aria-label="volume rocker" class="volume-rocker">
                <div class="left-rocker" >
-                  <button  aria-label="lowerVolume" onclick="volDown()">&mdash;</button>
+                  <button aria-label="lowerVolume" onclick="volDown()">&mdash;</button>
                 </div>
-               <div class ="right-rocker">
-                  <button aria-label="raiseVolume" onclick="volUp()">+</button>
+               <div class="right-rocker">
+                  <button aria-label="increaseVolume" onclick="volUp()">+</button>
                </div>
          </div>
       </main>

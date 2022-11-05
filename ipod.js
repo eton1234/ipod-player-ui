@@ -18,6 +18,7 @@ i.addEventListener('input', function () {
 	}
 }, false);
 
+
 function init() {
 	//initialize volLevels array
 	var i;
@@ -27,6 +28,12 @@ function init() {
 	volLevels[0].style.backgroundColor = "#9f5cc4";
 	volLevels[1].style.backgroundColor = "#9f5cc4";
 	volLevels[2].style.backgroundColor = "#9f5cc4";
+	//volume change anouncment  : doesn't work :/ bc aria-live only applies to unhidden text
+	var liveregion = document.createElement('div');
+	liveregion.setAttribute('aria-live', 'alert');
+	liveregion.setAttribute('aria-atomic', 'true');
+	liveregion.setAttribute('class', 'liveregion visuallyhidden');
+	document.querySelector(".volume-rocker").appendChild(liveregion);
 };
 
 function volUp() {
@@ -34,10 +41,12 @@ function volUp() {
 	for (var i = 0; i < 6; i++) {
 		if (volLevels[i].style.backgroundColor == "") {
 			volLevels[i].style.backgroundColor = "#9f5cc4";
+			updateLiveRegion("Volume is set to" + (i + 1));
+				//document.querySelector('.liveregion').textContent = 'Volume set to ' + (i + 1);
 			return;
 		}
 	}
-
+	
 }
 
 function volDown() {
@@ -45,6 +54,7 @@ function volDown() {
 	for (var i = 5; i >= 0; i--) {
 		if (volLevels[i].style.backgroundColor != "") {
 			volLevels[i].style.backgroundColor = "";
+			//document.querySelector('.liveregion').textContent = 'Volume set to ' + (i);
 			return;
 		}
 	}
