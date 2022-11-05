@@ -1,144 +1,181 @@
-/* 
-	Global classes 
-					*/
+/*
+Global classes
+*/
 body {
 	background-image: url("images/iphoneOL.jpg");
 	background-repeat: no-repeat;
 	font-family: Avenir, sans-serif;
-}
-
-#screen {
+	}
+	#screen {
 	height: 530px;
 	width: 300px;
 	margin: 105px 23px;
-}
-
-.head-bar {
-	text-align:  center;
+	}
+	.head-bar {
+	text-align: center;
 	background-color: rgb(206, 160, 53);
 	text-shadow: 2px 2px black;
 	color: white;
 	margin-bottom: 0px;
-}
-
-.back-button {
+	}
+	.back-button {
 	text-align: justify;
 	align-content:flex-start;
 	margin: 10px;
-}
-
-/* 
-	Albums 
-			*/
-
-.albums-album-wrapper {
-	/* side-by-side imaging with float:left */ 
-		max-width: 130;
-		word-wrap: break-word;
-		text-align: center;
-		float: left;
-		margin-left: 10px;
-		margin-right: 10px;
-		margin-bottom: 10px;
-}
-
-.albums-album-art {
+	}
+	/*
+	Albums
+	*/
+	.albums-album-wrapper {
+	/* side-by-side imaging with float:left */
+	max-width: 130;
+	word-wrap: break-word;
+	text-align: center;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	}
+	.albums-album-art {
 	width: 130px;
 	height: 130px;
-}
-
-.albums-album-name {
+	}
+	.albums-album-name {
 	font-size: 18px;
 	margin: 2px;
-}
-
-.albums-artist-name {
+	}
+	.albums-artist-name {
 	font-style: italic;
+	font-size: 14px;
 	margin: 2px;
-}
-
-/* 
-	Songs 
-			*/
-.songs-info-wrapper {
-	/*scrolling in case the info spills over */ 
+	}
+	/*
+	Songs
+	*/
+	.songs-info-wrapper {
+	/*scrolling in case the info spills over */
 	margin-bottom: 0px;
 	overflow-y: scroll;
 	max-height: 131.6px;
-}
-
-.songs-album-art {
+	}
+	.songs-album-art {
 	margin-top: 0px;
 	margin-left: 10px;
 	margin-right: 10px;
 	width: 130px;
 	height: 130px;
-}
-
-.songs-album-name {
+	}
+	.songs-album-name {
 	font-size: 16px;
 	margin: 0;
-}
-
-.songs-artist-name {
+	}
+	.songs-artist-name {
 	font-style: italic;
 	margin: 2px;
-}
-
-.songs-text-info {
-}
-
-.songs-album-year {
+	}
+	.songs-text-info {
+	}
+	.songs-album-year {
 	font-size: 18px;
 	margin: 2px
-}
-
-.songs-list {
+	}
+	.songs-list {
 	border: solid black 2px;
 	border-radius: 10px;
 	padding: 1px;
 	margin: 5px;
-}
+	}
+	/*
+	Player
+	*/
+	.player-album-art {
+		margin: 20px;
+		width: 230;
+		height: 230;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.player-song-info {
+		color:mediumpurple;
+		text-align: center;
+	}
+	.player-song-info p {
+		margin: 4px;
+		font-size: 20px;
+		font-family:Arial, Helvetica, sans-serif;
+	}
+	#player-song-name {
+		color: black;
+		margin-top: 8px;
+	}
+	#player-song-name em {
+		font-style: italic;
+	}
+	.volume-bar {
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		margin-top: 10px; 
+		align-items: center;
+	}
+	.volume-level {
+		border-style: solid;
+		border-color: black;
+		border-width: 1px;
+		margin: 3px;
+		width: 24px;
+		height: 6px;
+	}
+	.volume-rocker {
 
-/* 
-	Player 
-			*/
-.player-album-art {
-	
-}
+		margin-left: 40px;
+		margin-right: 40px;
+	}
+	.volume-rocker button {
+		width: 70px;
+		height: 20px;
+	}
+	.left-rocker {
+		float: left;
+	}
+	.right-rocker {
+		float: right;
+	}
 
-.player-song-info {
-	
-}
-
-#player-song-name {
-	
-}
-
-.volume-bar {
-	
-}
-
-.volume-level {
-	
-}
-
-.volume-rocker {
-	
-}
-
-.player-controls{
-	
-}
-
-#player-time {
-	
-}
-
-#time-elapsed {
-	
-}
-
-#time-total{
-	
-}
+	.player-controls{
+		display: flex;
+		justify-content: center;
+	}
+	#play-button .icon {
+		width: 40px;
+		height: 40px;
+		border-color: transparent transparent transparent white;
+		border-style: solid;
+		margin: auto;
+		border-width: 20px 0px 20px 40px; 
+		box-sizing: border-box;
+		border-width: 20px 0px 20px 40px;
+	}
+	#pause-button .icon {
+		width: 10px;
+		height: 40px; 
+		border-right: 15px solid white;
+		border-left: 15px solid white;
+		margin: auto;
+	}
+	#player-time {
+		width: 260px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#player-time input {
+		width: 260px;
+	}
+	#time-elapsed {
+		text-align: justify;
+		float: left;
+	}
+	#time-total{
+		text-align: end;
+	}

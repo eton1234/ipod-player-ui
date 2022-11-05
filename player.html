@@ -1,0 +1,67 @@
+<html>
+<header>
+   <title>Music Player</title>
+   <link rel="stylesheet" type="text/css" href="ipod.css"/>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</header>
+<body>
+   <div id="screen">
+      <nav>
+         <div role= "navigation" class="head-bar">
+            <form action="albums.html" class="back-button">
+               <button class="back-button"> <i class="material-icons">arrow_back</i> </button>
+         </form>
+         </div>
+      </nav>
+
+      <main>
+         <div>
+            <img class = player-album-art src="images/Hamilton-poster.jpeg" alt="Hamiilton Album Cover"/>
+         </div>
+
+         <div aria-label = "Song Info" class="player-song-info">    
+            <p aria-labelledby = "player-song-name" id="player-song-name">Aaron, Burr</p>
+            <p><em aria-label = "Album Name" >Hamilton</em> - Lin-Manuel Miranda </p>
+         </div>
+
+         <div id="player-time"  >
+            <input id="time-slider" type="range" min="0" max="180" step="1" value="0">
+            <div id="time-elapsed">0:00</div>
+            <div id="time-total">3:00</div>
+         </div>
+
+         <div class = "player-controls">
+            <button onclick="prevSong()"><i class="material-icons">skip_previous</i></button>
+            <button onclick="switchPlay()"><i id="play" class="material-icons">play_arrow</i></button>
+            <button onclick="nextSong  ()"><i class="material-icons">skip_next</i></button>
+         </div>
+
+         <div class = "volume-bar">
+            <div> <i class="material-icons">volume_down</i> </div>
+            <div id="vl0" class = "volume-level"></div>
+            <div id="vl1" class = "volume-level"></div>
+            <div id="vl2" class = "volume-level"></div>
+            <div id="vl3" class = "volume-level"></div>
+            <div id="vl4" class = "volume-level"></div>
+            <div id="vl5" class = "volume-level"></div>
+         </div>
+         <div role = "toolbar" class="volume-rocker">
+               <div class="left-rocker" >
+                  <button  aria-label="lowerVolume" onclick="volDown()">&mdash;</button>
+                </div>
+               <div class ="right-rocker">
+                  <button aria-label="raiseVolume" onclick="volUp()">+</button>
+               </div>
+         </div>
+      </main>
+   </div>
+<script src="ipod.js"></script>
+</body>
+</html>
+<!-- 
+* bg iphone img is 363x762px
+* iphone 'screen' is apprx 300x530 -->
